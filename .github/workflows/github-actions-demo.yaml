@@ -11,5 +11,5 @@ jobs:
     - name: Run Trivy vulnerability scanner in fs mode
       uses: aquasecurity/trivy-action@master
       with:
-        args: --exit-code 1 --file Dockerfile
+        args: config . --exit-code 1
         trivy-config: trivy.yaml
