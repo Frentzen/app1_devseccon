@@ -3,7 +3,7 @@ const app = express();
 
 app.get('/', (req, res) => {
   const userInput = req.query.input;
-  const output = eval(userInput);  // This line is vulnerable to RCE attacks
+  const output = eval(userInput);  
   res.send(output);
 });
 
