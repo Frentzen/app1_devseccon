@@ -12,4 +12,3 @@ jobs:
       uses: aquasecurity/trivy-action@master
       with:
         args: config . --exit-code 1
-        trivy-config: trivy.yaml
