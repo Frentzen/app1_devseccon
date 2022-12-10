@@ -29,3 +29,9 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+
+
+      - name: Upload to DockerHub
+        run: |
+          docker build -t docker.io/dockerman1000/app1devseccon:${{ github.sha }} .
+          docker push docker.io/dockerman1000/app1devseccon:${{ github.sha }}
